@@ -1,7 +1,7 @@
 from .main import Main
 from .locators import HomePageLocators
 from .cart_page import CartPage
-from .samsung_galaxy_s7_page import SamsungGalaxyS7
+from .samsung_galaxy_s7_page import SamsungGalaxyS7Page
 import time
 
 
@@ -12,6 +12,7 @@ class HomePage(Main):
 
     def go_to_samsung_galaxy_s7_page(self):
         self.driver.find_element(*HomePageLocators.PHONES_BUTTON).click()
-        time.sleep(3)
+        time.sleep(2)
         self.driver.find_element(*HomePageLocators.SAMSUNG_GALAXY_S7_LINK).click()
-        return SamsungGalaxyS7(driver=self.driver, url=self.driver.current_url, timeout=5)
+        time.sleep(2)
+        return SamsungGalaxyS7Page(driver=self.driver, url=self.driver.current_url, timeout=5)
