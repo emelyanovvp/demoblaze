@@ -14,6 +14,7 @@ def test_add_samsung_galaxy_s7_to_cart(driver):
     text = alert.text
     assert text == "Product added", "Product wasn't added"
 
+
 def test_go_to_cart_page(driver):
     url = "https://www.demoblaze.com/prod.html?idp_=4#"
     page = SamsungGalaxyS7Page(driver, url, timeout=5)

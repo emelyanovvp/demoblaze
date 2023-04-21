@@ -1,6 +1,12 @@
 from selenium.webdriver.common.by import By
 
 
+class SignUpLocators:
+    SIGN_UP_BUTTON = (By.XPATH, "//button[text()='Sign up']")
+    INPUT_PASSWORD_BLANK = (By.CSS_SELECTOR, "input#sign-password")
+    INPUT_USERNAME_BLANK = (By.CSS_SELECTOR, "input#sign-username")
+
+
 class HomePageLocators:
     SAMSUNG_GALAXY_S7_LINK = (By.XPATH, "//a[text()='Samsung galaxy s7']")
     HOME_BUTTON = (By.XPATH, "//a[text()='Home ']")
@@ -20,7 +26,6 @@ class SamsungGalaxyS7Locators:
 
 class CartPageLocators:
     THANKS_MESSAGE = (By.XPATH, "//h2[text()='Thank you for your purchase!']")
-
     PLACE_ORDER_TITLE = (By.XPATH, "//h5[text()='Place order']")
     PLACE_ORDER_BUTTON = (By.XPATH, "//button[text()='Place Order']")
     INPUT_NAME_BLANK = (By.CSS_SELECTOR, "input#name")
@@ -30,6 +35,6 @@ class CartPageLocators:
     INPUT_MONTH_BLANK = (By.CSS_SELECTOR, "input#month")
     INPUT_YEAR_BLANK = (By.CSS_SELECTOR, "input#year")
     PURCHASE_BUTTON = (By.XPATH, "//button[text()='Purchase']")
-    CLOSE_BUTTON = (By.XPATH, "//button[text()='Close']")
+
 
 

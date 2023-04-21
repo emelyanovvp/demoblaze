@@ -22,7 +22,6 @@ def test_place_order_and_purchase(driver):
             driver.find_element(*CartPageLocators.INPUT_YEAR_BLANK).send_keys("2022")
             driver.find_element(*CartPageLocators.PURCHASE_BUTTON).click()
             time.sleep(2)
-            driver.find_element(*CartPageLocators.CLOSE_BUTTON)
 
     for h in driver.window_handles:
         if h != page_cart:
@@ -30,7 +29,7 @@ def test_place_order_and_purchase(driver):
             driver.switch_to.window(thanks_window)
             thanks_element = driver.find_element(*CartPageLocators.THANKS_MESSAGE)
             thanks_text = thanks_element.text
-            assert thanks_text == "Thank you for your purchase!"
+            assert thanks_text == "Thank you for your purchase!", "No purchases were done"
 
 
 def test_try_purchase_without_placing_order(driver):

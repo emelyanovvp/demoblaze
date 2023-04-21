@@ -16,3 +16,7 @@ class HomePage(Main):
         self.driver.find_element(*HomePageLocators.SAMSUNG_GALAXY_S7_LINK).click()
         time.sleep(2)
         return SamsungGalaxyS7Page(driver=self.driver, url=self.driver.current_url, timeout=5)
+
+    def sign_up(self):
+        self.driver.find_element(*HomePageLocators.SIGN_UP_BUTTON).click()
+        time.sleep(2)
